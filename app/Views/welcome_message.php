@@ -399,57 +399,25 @@
 				<div class="testimonials-inner section-inner">
 					<h2 class="section-title mt-0 text-center">Testimonials</h2>
 					<div class="testimonials-wrap">
+					<?php foreach($testimonial as $key => $row) { ?>
 						<div class="testimonial text-xs is-revealing">
 							<div class="testimonial-inner">
 								<div class="testimonial-main">
 									<div class="testimonial-header">
-										<img class="mb-16" src="<?= base_url(); ?>/assets-landingpage/dist/images/testimonial-01.png" alt="Testimonial">
+										<img class="mb-16" src="<?php echo base_url('uploads/'.$row['image']); ?>" alt="Testimonial">
 									</div>
 									<div class="testimonial-body">
-										<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+										<p class="mb-0"><?= $row['deskripsi'] ?></p>
 									</div>
 								</div>
 								<div class="testimonial-footer">
 									<div class="testimonial-link">
-										<a href="#">@martajones</a>
+										<a href="#"><?= $row['username'] ?></a>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="testimonial text-xs is-revealing">
-							<div class="testimonial-inner">
-								<div class="testimonial-main">
-									<div class="testimonial-header">
-										<img class="mb-16" src="<?= base_url(); ?>/assets-landingpage/dist/images/testimonial-02.png" alt="Testimonial">
-									</div>
-									<div class="testimonial-body">
-										<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-									</div>
-								</div>
-								<div class="testimonial-footer">
-									<div class="testimonial-link">
-										<a href="#">@michealpahm</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="testimonial text-xs is-revealing">
-							<div class="testimonial-inner">
-								<div class="testimonial-main">
-									<div class="testimonial-header">
-										<img class="mb-16" src="<?= base_url(); ?>/assets-landingpage/dist/images/testimonial-03.png" alt="Testimonial">
-									</div>
-									<div class="testimonial-body">
-										<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-									</div>
-								</div>
-								<div class="testimonial-footer">
-									<div class="testimonial-link">
-										<a href="#">@markbrown</a>
-									</div>
-								</div>
-							</div>
-						</div>
+					<?php  } ?>
 					</div>
 				</div>
 			</div>
